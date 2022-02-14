@@ -7,3 +7,15 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  background-image: linear-gradient(to top, #EEEEEE, #FFFFFF);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+body, input, button, textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+}

@@ -1,0 +1,199 @@
+@import '../../Globals/colors.scss';
+
+.Display {
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+
+  &__Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__First {
+    font-size: 3.6rem;
+    letter-spacing: -1px;
+    background-image: linear-gradient(to top, $color-orange, $color-orange-2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__Trace {
+    background-color: $color-gray-1;
+    width: 25.5rem;
+    height: .1rem;
+    margin-top: 1rem;
+  }
+
+  &__Content {
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__Box--1,
+  &__Box--2,
+  &__Box--3 {
+    position: relative;
+    height: 14.5rem;
+    width: 6.5rem;
+  }
+
+  &__Segment--A,
+  &__Segment--B,
+  &__Segment--C,
+  &__Segment--D,
+  &__Segment--E,
+  &__Segment--F,
+  &__Segment--G {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: $color-gray;
+  }
+
+  &__Span {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    background-color: $color-black;
+    height: 200%;
+    width: 200%;
+  }
+
+  &__Segment--A,
+  &__Segment--D,
+  &__Segment--G {
+    width: 7rem;
+    height: 1.5rem;
+  }
+
+  &__Segment--A {
+    clip-path: polygon(100% 0, 100% 15%, 80% 100%, 20% 100%, 0 15%, 0% 0%);
+
+  }
+
+  &__Segment--D {
+    clip-path: polygon(80% 0, 100% 85%, 100% 100%, 0 100%, 0 85%, 20% 0);
+  }
+
+  &__Segment--G {
+    clip-path: polygon(85% 0, 100% 50%, 85% 100%, 15% 100%, 0% 50%, 15% 0);
+    height: 1.7rem;
+  }
+  
+  &__Segment--B,
+  &__Segment--C,
+  &__Segment--E, 
+  &__Segment--F {
+    height: 7rem;
+    width: 1.5rem;;
+  }
+
+  &__Segment--B,
+  &__Segment--C {
+    clip-path: polygon(85% 0, 100% 0, 100% 100%, 85% 100%, 0 80%, 0 20%);
+
+  }
+
+  &__Segment--E, 
+  &__Segment--F {
+    clip-path: polygon(15% 0, 100% 20%, 100% 80%, 15% 100%, 0 100%, 0 0);
+
+  }
+
+  &__Segment--A {
+    top: 0%;
+    left: 50%;
+  }
+  
+  &__Segment--B {
+    right: 0;
+    top: 0;
+    top: 21%;
+    left: 100%;
+  }
+  
+  &__Segment--C {
+    top: 74%;
+    left: 100%;
+  }
+  
+  &__Segment--D {
+    bottom: -5%;
+    left: 50%;
+  }
+  
+  &__Segment--E {
+    top: 74%;
+    left: 0%;
+  }
+  
+  &__Segment--F {
+    top: 21%;
+    left: 0%;
+  }
+  
+  &__Segment--G {
+    bottom: 41%;
+    left: 50%;
+  }
+ 
+  &__Ligth--0 &__Span--G {
+    opacity: 0;
+  }
+
+  &__Ligth--1 &__Span--A,
+  &__Ligth--1 &__Span--D,
+  &__Ligth--1 &__Span--E,
+  &__Ligth--1 &__Span--F, 
+  &__Ligth--1 &__Span--G {
+    opacity: 0;
+  }
+
+  &__Ligth--2 &__Span--C,
+  &__Ligth--2 &__Span--F {
+    opacity: 0;
+  }
+
+  &__Ligth--3 &__Span--E,
+  &__Ligth--3 &__Span--F {
+    opacity: 0;
+  }
+
+  &__Ligth--4 &__Span--A,
+  &__Ligth--4 &__Span--D,
+  &__Ligth--4 &__Span--E {
+    opacity: 0;
+  }
+
+  &__Ligth--5 &__Span--B,
+  &__Ligth--5 &__Span--E {
+    opacity: 0;
+  }
+
+  &__Ligth--6 &__Span--B {
+    opacity: 0;
+  }
+
+  &__Ligth--7 &__Span--D,
+  &__Ligth--7 &__Span--E,
+  &__Ligth--7 &__Span--F,
+  &__Ligth--7 &__Span--G {
+    opacity: 0;
+  }
+
+  &__Ligth--9 &__Span--E {
+    opacity: 0;
+  }
+
+  &__Footer {
+
+  }
+}
