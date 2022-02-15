@@ -35,8 +35,32 @@
   &__Content {
     width: 30rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+  }
+
+  &__Message {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  &__Message--green {
+    color: $color-green;
+  }
+
+  &__Message--red {
+    color: $color-red;
+  }
+
+  &__Number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    letter-spacing: -1px;
+    text-align: center;
   }
 
   &__Box--1,
@@ -45,6 +69,11 @@
     position: relative;
     height: 14.5rem;
     width: 6.5rem;
+  }
+
+  &__Box--3,
+  &__Box--2 {
+    margin-left: 3rem;
   }
 
   &__Segment--A,
@@ -57,6 +86,13 @@
     position: absolute;
     transform: translate(-50%,-50%);
     background-color: $color-gray;
+  }
+
+  &__red &__Span {
+    background-color: $color-red
+  }
+  &__green &__Span {
+    background-color: $color-green;
   }
 
   &__Span {
@@ -145,6 +181,7 @@
     left: 50%;
   }
  
+  // LOGICA DOS LEDS
   &__Ligth--0 &__Span--G {
     opacity: 0;
   }
@@ -193,7 +230,73 @@
     opacity: 0;
   }
 
-  &__Footer {
+  &__hidden {
+    display: none;
+  }
 
+  &__Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Input {
+    padding: 0 1rem;
+    width: 21.7rem;
+    height: 4.2rem;
+    border: 1px solid $color-gray-1;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    margin-right: 2rem;
+
+    &:focus {
+      outline: 1px solid $color-orange-1;
+      &:read-only  {
+        outline: none;
+      }
+    }
+  }
+
+  &__Btn {
+    padding: 1.35rem 1.62rem;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    transition: all .3s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__Btn--Orange {
+    background-image: linear-gradient(to bottom, $color-orange,$color-orange-3);
+  }
+
+  &__Btn--Gray {
+    background-image: linear-gradient(to bottom, #434854,#9E9E9E);
+    margin-top: 3rem;
+  }
+
+  &__Btn--disable {
+    background-color: $color-gray;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__Icon {
+    font-size: 2rem;
+    color: $color-white;
+    margin-right: .5rem;
   }
 }
+

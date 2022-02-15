@@ -1,20 +1,28 @@
+@import './mixin.scss';
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+
 html {
   font-size: 62.5%;
+
+  @include ResponseMedia(43.75em) {
+    font-size: 50%;
+  }
 }
 
+
 body {
-  background-image: linear-gradient(to top, #EEEEEE, #FFFFFF);
+  background-image: linear-gradient(to bottom, #EEEEEE, #FFFFFF);
   background-repeat: no-repeat;
   height: 100vh;
 }
 
-body, input, button, textarea {
+body, input, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   box-sizing: border-box;
