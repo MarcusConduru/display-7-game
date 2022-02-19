@@ -20,31 +20,20 @@ const MainDisplay: React.FC = () => {
   },[isNewValue])
 
   const maskNumber = (value:string) => {
-    // Através do regex garanto que o campo do input não tenha mais que 3 valores
     return value
       .replace(/\D/g, "")
       .replace(/(\d{4})/, "")
   }
 
   const searchForCorrectrValue = () => {
-    // A Lógica para os display foi criar uma classe no css chamdada Display__Ligth-- + o numero(ex: Display__Ligth--5 irá me mostrar 5 no display), ela se inicia na linha 185 e termina na linha 231
-    // A partir dessa classe eu controlo quais segmentos de display irão ficar visivel e quais não irão 
-    // Eu quebro o valor do palpite e transfomo em um vetor 
-    // Crio o loop que percorre esse vetor
-    // Pra cada valor do vetor há um display que é contralado a partir do index
-    // Com Index eu coloco as classes referentes aos numeros do vetor em cada display
-
     clearCacheNumbers()
-    if(!value) return // Caso a pessoa não informe nenhum valor, não irá ocorrer a lógica
+    if(!value) return 
     const guess = !error ? value.split('') : error.toString().split('')
     const mensagem = document.getElementById(`message`) as HTMLParagraphElement
     
     let index = 1
     let ClassMessage = ''
 
-    // No condinal a baixo, eu verifico se o palpite está igual, abaixo ou acima do valor da requisição
-    // Atraves do hooks chamad error, verifico se a requisição teve um error 
-    // No condional das linhas 45 e 51 eu mudo a cor dos displays e travo tanto o input quanto o botão
     if(!!error) {
       setMessage('ERRO')
       setIsReadyOnly(true)
@@ -77,9 +66,6 @@ const MainDisplay: React.FC = () => {
   }
 
   const clearCacheNumbers = () => {
-    // Reseto os segmentos dos 3 display para padrão de um unico display com valor 0
-    // Para posibilitar fazer um novo palpite
-    // Reseto o valor do input
     setValue('')
     input.current?.focus()
     const display1 = document.getElementById(`display1`) as HTMLDivElement
@@ -93,9 +79,6 @@ const MainDisplay: React.FC = () => {
   }
 
   const ResetDisplay = () => {
-    // Reseto todos os displays
-    // Chamo novamente a requisição através do setIsReadyOnly que está vinculada com useEffect e zero os valores, 
-    // Limpadando a tela de todos as informações e habilitando o input e o botão
     const button = btn.current as HTMLButtonElement
     button.className = 'Display__Btn Display__Btn--Orange'
     clearCacheNumbers()
