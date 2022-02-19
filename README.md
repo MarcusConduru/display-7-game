@@ -1,11 +1,3 @@
-### `npm start`
-
-Executa o aplicativo no modo de desenvolvimento.\
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
-
-A página será recarregada se você fizer edições.\
-Você também verá erros de lint no console.
-
 <h2>Qual é o número?</h2>
 <p>O problema consiste em receber um número através de uma requisição e implementar
 um jogo para acertar este número através de palpites. Ao errar um palpite, irá ser informado se
